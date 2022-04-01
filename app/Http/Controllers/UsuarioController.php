@@ -14,7 +14,10 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $users=User::all();
+        //$users=User::all();
+        $users=DB::select("
+        SELECT * FROM users u JOIN permisos p 
+        ON u.per_id=p.per_id");
         return view('auth.usuario.index')
         ->with('users',$users)
         ;

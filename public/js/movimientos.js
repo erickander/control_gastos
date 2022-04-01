@@ -30,7 +30,7 @@ const validar=()=>{
       }
       if (mov_cantidad.value.length==0) {
         Swal.fire({
-  icon: 'error',
+  icon: 'info',
   title: 'Error',
   text: 'Campo Obligatorio!',
 });              
